@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -28,7 +29,8 @@ import { CategoriaService } from '../services/domain/categoria.service';
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     CategoriaService,
-    ErrorInterceptorProvider
+    ErrorInterceptorProvider,
+    AuthService
   ]
 })
 export class AppModule { }
